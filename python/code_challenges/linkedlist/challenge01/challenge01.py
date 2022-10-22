@@ -32,9 +32,9 @@ class LinkedList:
                 return
             current = current.next
     def printAll(self):
-        '''
-        this function for print and return new list 
-        '''
+    
+        # this function for print and return new list 
+    
         list=[]
         if self.head is None :
             print("The linked list is empty")

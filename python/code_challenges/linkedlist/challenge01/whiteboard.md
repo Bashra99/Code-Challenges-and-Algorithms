@@ -1,1 +1,1 @@
-![WhiteBording.png](WhiteBording.png "WhiteBording")
+![WhiteBording.png](whiteboard.png "WhiteBording")
