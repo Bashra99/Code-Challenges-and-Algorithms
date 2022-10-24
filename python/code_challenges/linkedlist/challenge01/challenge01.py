@@ -19,18 +19,7 @@ class LinkedList:
             while current.next is not None:
                 current = current.next
             current.next = node
-    def delete_node(self, value):
-        if self.head is None:
-            return
-        if self.head.value == value:
-            self.head = self.head.next
-            return
-        current = self.head
-        while current.next is not None:
-            if current.next.value == value:
-                current.next = current.next.next
-                return
-            current = current.next
+  
     def printAll(self):
     
         # this function for print and return new list 
@@ -41,9 +30,17 @@ class LinkedList:
         else :
             current = self.head
             while current is not None:
-                list.append(current.value)
+                list.append(current.value.__doc__)
                 print(current.value)
 
                 current = current.next
         print(list)
         return list
+
+def delete_node(node):
+    # this function to delete node
+    if node.next is None:
+        raise Exception("Can't delete the last node with this technique!")
+    node.value = node.next.value
+    node.next = node.next.next
+    
