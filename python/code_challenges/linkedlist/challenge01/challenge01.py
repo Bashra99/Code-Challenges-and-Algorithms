@@ -19,6 +19,19 @@ class LinkedList:
             while current.next is not None:
                 current = current.next
             current.next = node
+
+    def middleNode(self,head):
+        # this method to return  the middle node
+        node_value = []
+        current = head
+        while current is not None:
+            node_value.append(current.value)
+            current = current.next
+        if len(node_value) % 2 == 0:
+            return node_value[len(node_value)//2]
+        else:
+            return node_value[len(node_value)//2+1]
+
   
     def printAll(self):
     
@@ -30,7 +43,7 @@ class LinkedList:
         else :
             current = self.head
             while current is not None:
-                list.append(current.value.__doc__)
+                list.append(current.value)
                 print(current.value)
 
                 current = current.next

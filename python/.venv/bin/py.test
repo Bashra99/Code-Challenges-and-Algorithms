@@ -1,4 +1,4 @@
-#!/home/boshra/cc/advance-code-challenges-template/python/.venv/bin/python3
+#!/home/student/401-01/cc/Code-Challenges-and-Algorithms/python/.venv/bin/python3.10
 # -*- coding: utf-8 -*-
 import re
 import sys
