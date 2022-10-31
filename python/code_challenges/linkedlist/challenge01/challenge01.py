@@ -51,9 +51,13 @@ class LinkedList:
         return list
 
 def delete_node(node):
-    # this function to delete node
-    if node.next is None:
-        raise Exception("Can't delete the last node with this technique!")
-    node.value = node.next.value
-    node.next = node.next.next
+    """ this function to delete node
+    """    
+    if node.next is not None:
+        node.value = node.next.value
+        node.next = node.next.next
+        return "the node is deleted"
+    else:
+        return "Sorry we can not delete the last node!!" 
+    
     
