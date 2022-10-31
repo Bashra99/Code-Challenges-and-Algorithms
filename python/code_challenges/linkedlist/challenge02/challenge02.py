@@ -22,13 +22,19 @@ class LinkedList:
         current.next = value
 
     def middleNode(self, head):
-      # this method to return  the middle node
+        """
+        middleNode method take a head node and return the middle node
 
-        mid_node = []
-        while head is not None:
-            mid_node.append(head.value)
-            head = head.next
-        return mid_node[len(mid_node)//2:]
+        """
+        if head is None:
+            return None
+        slow = head
+        fast = head
+        while fast is not None and fast.next is not None:
+            slow = slow.next
+            fast = fast.next.next
+        return slow.value
+
         
 if __name__ == "__main__":
     linkedList1 = LinkedList()

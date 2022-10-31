@@ -47,11 +47,11 @@ def linkedList2():
 
 def test_Middle_node_1(linkedList1):
     actual = linkedList1
-    expected =  [3,4,5]
+    expected =  3
     assert actual == expected
     
 def test_Middle_node_2(linkedList2):
     actual = linkedList2
-    expected = [4,5,6]
+    expected = 4
     assert actual == expected
     
