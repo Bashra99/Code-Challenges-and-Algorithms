@@ -58,6 +58,6 @@ def delete_node(node):
         node.next = node.next.next
         return "the node is deleted"
     else:
-        return "Sorry we can not delete the last node!!" 
+        return "Sorry we can not delete the last node" 
     
     
