@@ -21,20 +21,40 @@ class LinkedList:
             current = current.next
         current.next = value
 
-    def middleNode(self, head):
-        """
-        middleNode method take a head node and return the middle node
-
-        """
-        if head is None:
+    def middleNode(head_linked_list):
+        if head_linked_list is None:
             return None
-        slow = head
-        fast = head
-        while fast is not None and fast.next is not None:
-            slow = slow.next
-            fast = fast.next.next
-        return slow.value
-
+        else:
+            current = head_linked_list.head
+            list_of_nodes=[]
+            while current is not None:
+                list_of_nodes.append(current.value)
+                current = current.next
+            if len(list_of_nodes)%2==0:
+                return list_of_nodes[len(list_of_nodes)//2]
+            else:
+                return list_of_nodes[len(list_of_nodes)//2]
+    def mid_nodes(self,x):
+        list_of_nodes=[]
+        if self.head is None:
+            return "The linked list is empty"
+        else:
+            current = self.head
+            while current is not None:
+                list_of_nodes.append(current.value)
+                current = current.next
+        i=list_of_nodes.index(x)
+        return list_of_nodes[i:]
+    def __str__(self):
+        current = self.head
+        output = ''
+        while current:
+            output += f'{{ {current.value} }} -> '
+            current = current.next
+        return output + 'NULL'
+    def __repr__(self):
+        return self.__str__()
+        
         
 if __name__ == "__main__":
     linkedList1 = LinkedList()
