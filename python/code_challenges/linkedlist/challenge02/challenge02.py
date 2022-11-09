@@ -25,15 +25,13 @@ class LinkedList:
         if head_linked_list is None:
             return None
         else:
+            mid = head_linked_list.head
             current = head_linked_list.head
-            list_of_nodes=[]
-            while current is not None:
-                list_of_nodes.append(current.value)
-                current = current.next
-            if len(list_of_nodes)%2==0:
-                return list_of_nodes[len(list_of_nodes)//2]
-            else:
-                return list_of_nodes[len(list_of_nodes)//2]
+            while current and current.next:
+                mid = mid.next
+                current = current.next.next
+            return mid
+
     def mid_nodes(self,x):
         list_of_nodes=[]
         if self.head is None:
@@ -70,7 +68,7 @@ if __name__ == "__main__":
     linkedList1.append(node4)
     linkedList1.append(node5)
 
-    print(linkedList1.middleNode(linkedList1.head))
+    print(linkedList1)
 
     linkedList2 = LinkedList()
     node1 = Node(1)
@@ -87,4 +85,5 @@ if __name__ == "__main__":
     linkedList2.append(node5)
     linkedList2.append(node6)
 
-    print(linkedList2.middleNode(linkedList2.head))
+    print(linkedList2)
+    print(linkedList1.middleNode())
