@@ -34,7 +34,12 @@ class Tree:
         convert to  binary search tree
         
         '''
-        if not node_list :
+        if len(node_list) == 0:
+
+            return None
+        elif len(node_list)==1:
+            return Node(node_list[0])
+        elif not node_list :
             return None
         node_list.sort()
         mid = len(node_list)//2
@@ -43,3 +48,9 @@ class Tree:
         root.right = self.tree_convert_to_BST(node_list[mid+1:])
     
         return root
+
+if __name__ == "__main__":
+    tree=Tree()
+    node_list= [0,-3,-10,5,9]
+    root=tree.tree_convert_to_BST(node_list)
+    print(tree.print_tree(root))
